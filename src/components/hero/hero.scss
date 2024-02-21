@@ -1,0 +1,144 @@
+@import "../../app.scss";
+.hero {
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  overflow: hidden;
+  position: relative;
+  .wrapper {
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    padding: 20px;
+    @include tablet {
+      padding: 50px;
+    }
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      @include tablet {
+        width: 70%;
+        gap: 10px;
+      }
+      @include mobile {
+        height: 50%;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        height: 600px;
+        gap: 27px;
+      }
+      @include sm {
+        gap: 40px
+    };
+
+      h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+        @include mobile {
+          font-size: 20px;
+        }
+        @include sm {
+            font-size: 18px;
+            letter-spacing: 4px
+        };
+      }
+      .hello {
+        display: flex;
+        .tarek {
+          color: rebeccapurple;
+        }
+      }
+      h1 {
+        font-size: 88px;
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+      span {
+        color: lightgrey;
+        font-size: 40px;
+        @include mobile {
+          font-size: 23px;
+        }
+        @include sm {
+            font-size: 20px;
+        };
+      }
+      .buttons {
+        display: flex;
+        a {
+          padding: 0px 10px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 300;
+          text-align: center;
+          align-items: center;
+          display: flex;
+          @include mobile {
+            font-size: 10px;
+        }
+        }
+        z-index: 998;
+        .Contact {
+          background-color: white;
+          color: black;
+        }
+        .resume {
+          border: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      img {
+        width: 50px;
+      }
+    }
+  }
+  .imageContainer {
+    height: 100%;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    right: 100px;
+
+    @include mobile {
+      height: 50%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+    }
+    img {
+      width: 120%;
+      height: 100%;
+      object-fit: cover;
+      @include mobile {
+        width: 350px;
+        position: absolute;
+        top: 0px;
+        right: -100px;
+      }
+    }
+  }
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+}
