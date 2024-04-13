@@ -26,6 +26,9 @@
       gap: 20px;
       text-align: center;
       align-items: center;
+      margin-top: 85px;
+    }
+    @include sm {
       margin-top: 70px;
     }
 
@@ -52,9 +55,9 @@
     flex: 1;
     position: relative;
     @include mobile {
-    width: 100%;
-    padding: 50px;
-    margin: auto;
+      width: 100%;
+      padding: 50px;
+      margin: auto;
     }
     @include sm {
       padding: 10px 8px;
@@ -65,14 +68,28 @@
       stroke: orange;
       z-index: -1;
       overflow: hidden;
-     svg {
-      width:450px;
-      height:450px;
-      @include mobile {
-        width:250px;
-      height:250px;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      @include sm {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      svg {
+        width: 450px;
+        height: 450px;
+        @include tablet {
+          width: 350px;
         }
-     }
+        @include mobile {
+          width: 250px;
+          height: 250px;
+          margin-top: 40px;
+        }
+        @include sm {
+          margin-top: 10px;
+        }
+      }
     }
     form {
       display: flex;
@@ -93,6 +110,11 @@
           padding: 10px;
         }
       }
+      textarea {
+        @include sm {
+          padding: 25px 10px;
+        }
+      }
       button {
         padding: 20px;
         border: none;
@@ -102,7 +124,6 @@
         @include mobile {
           padding: 10px;
         }
-        
       }
     }
   }

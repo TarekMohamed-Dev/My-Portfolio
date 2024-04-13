@@ -18,12 +18,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 40px;
-
+      gap: 15px;
       @include tablet {
         width: 70%;
-        gap: 10px;
       }
+
       @include mobile {
         height: 50%;
         width: 100%;
@@ -32,30 +31,36 @@
         display: flex;
         justify-content: flex-start;
         height: 600px;
-        gap: 27px;
       }
-      @include sm {
-        gap: 40px
-    };
 
       h2 {
-        font-size: 30px;
-        color: rebeccapurple;
-        letter-spacing: 10px;
+        font-size: 25px;
+        color: rgb(125 5 210);
+        font-weight: 300;
         @include mobile {
           font-size: 20px;
         }
         @include sm {
-            font-size: 18px;
-            letter-spacing: 4px
-        };
-      }
-      .hello {
-        display: flex;
-        .tarek {
-          color: rebeccapurple;
+          font-size: 14px;
+          letter-spacing: 2px;
         }
       }
+
+      .my-name {
+        color: white;
+        font-size: 70px;
+        font-weight: 700;
+        @include tablet {
+          font-size: 60px;
+        }
+        @include mobile {
+          font-size: 35px;
+        }
+        @include sm {
+          font-size: 30px;
+        }
+      }
+
       h1 {
         font-size: 88px;
         @include mobile {
@@ -63,14 +68,37 @@
         }
       }
       span {
-        color: lightgrey;
-        font-size: 40px;
+        color: rgb(241 245 249);
+        font-size: 80px;
+        text-wrap: nowrap;
+        @include tablet {
+          font-size: 55px;
+        }
         @include mobile {
-          font-size: 23px;
+          font-size: 37px;
         }
         @include sm {
-            font-size: 20px;
-        };
+          font-size: 33px;
+        }
+      }
+      .desc {
+        color: rgb(241 245 249);
+        font-size: 18px;
+        width: 800px;
+        font-weight: 500;
+        @include tablet {
+          width: 550px;
+        }
+        @include mobile {
+          width: 500px;
+          font-size: 16px;
+          line-height: 1.7;
+        }
+        @include sm {
+          font-size: 14px;
+          width: 300px;
+          line-height: 1.7;
+        }
       }
       .buttons {
         display: flex;
@@ -88,7 +116,7 @@
           display: flex;
           @include mobile {
             font-size: 10px;
-        }
+          }
         }
         z-index: 998;
         .Contact {
@@ -113,22 +141,12 @@
     position: absolute;
     top: 0;
     right: 100px;
-
-    @include mobile {
-      height: 50%;
-      width: 100%;
-      top: unset;
-      bottom: 0;
-    }
     img {
       width: 120%;
       height: 100%;
       object-fit: cover;
       @include mobile {
-        width: 350px;
-        position: absolute;
-        top: 0px;
-        right: -100px;
+        display: none;
       }
     }
   }
