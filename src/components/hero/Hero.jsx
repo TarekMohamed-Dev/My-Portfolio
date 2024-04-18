@@ -54,35 +54,31 @@ const imgVariants = {
 
 const Hero = () => {
   return (
-    <div className='hero'>
+     <div className='hero'>
       <div className="wrapper">
         <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-          <motion.h2 variants={textVariants} >Greetings, my name is</motion.h2>
-          <div className="hello">
-           
+          <motion.h2 variants={textVariants}>Greetings, my name is</motion.h2>
             <motion.span variants={textVariants} className='my-name'>Tarek Mohamed</motion.span>
-          </div>
           <motion.span variants={textVariants}>Front-end Developer</motion.span>
-          <motion.div className='desc' variants={textVariants}>A skilled front-end developer with extensive experience in JavaScript, and I specialize in frameworks like React.js and Next.js.
-My expertise lies in delivering high-quality, optimized code that caters to clients needs and exceeds their expectations.</motion.div>
+          <motion.div className='desc' variants={textVariants}>
+          A skilled front-end developer with extensive experience in JavaScript, and I specialize in frameworks like React.js and Next.js. My expertise lies in delivering high-quality, optimized code that caters to clients' needs and exceeds their expectations.
+          </motion.div>
           <motion.div variants={textVariants} className="buttons">
             <motion.a href='#Portfolio' variants={textVariants}>See The Latest works</motion.a>
             <motion.a href='#Contact' className='Contact' variants={textVariants}>Contact Me</motion.a>
-            <motion.a variants={textVariants} href='./Tarek-Cv.pdf' className='resume' download>
+            <motion.a variants={textVariants} href='./Tarek-resume.pdf' className='resume' download>
               <FaCloudDownloadAlt style={{ width: "35px", height: "35px" }} />
               <h6>Resume</h6>
             </motion.a>
           </motion.div>
           <motion.img variants={textVariants} animate="scrollButton" src="./scroll.png" alt="scroll" />
         </motion.div>
+        <motion.div className="imageContainer" variants={imgVariants} initial="initial" animate="animate">
+          <motion.img variants={imgVariants} src="./hero0.png" alt="hero" />
+        </motion.div>
       </div>
       <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
-        Creative Developer Desiner
-      </motion.div>
-      <motion.div className="imageContainer" variants={imgVariants} initial="initial" animate="animate">
-        <motion.img
-          variants={imgVariants}
-          src="./hero0.png" alt="hero" />
+        Creative Developer Designer
       </motion.div>
     </div>
   )

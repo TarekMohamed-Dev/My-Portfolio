@@ -10,7 +10,7 @@
     margin: auto;
     padding: 20px;
     @include tablet {
-      padding: 50px;
+      padding: 30px;
     }
     .textContainer {
       width: 50%;
@@ -18,19 +18,17 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 15px;
+      gap: 5px;
       @include tablet {
         width: 70%;
       }
 
       @include mobile {
-        height: 50%;
+        height: 100%;
         width: 100%;
-        text-align: center;
-        align-items: center;
         display: flex;
         justify-content: flex-start;
-        height: 600px;
+        gap:15px;
       }
 
       h2 {
@@ -63,7 +61,7 @@
 
       h1 {
         font-size: 88px;
-        @include mobile {
+        @i  nclude mobile {
           font-size: 36px;
         }
       }
@@ -71,6 +69,7 @@
         color: rgb(241 245 249);
         font-size: 80px;
         text-wrap: nowrap;
+         margin: -5px 0;
         @include tablet {
           font-size: 55px;
         }
@@ -86,18 +85,24 @@
         font-size: 18px;
         width: 800px;
         font-weight: 500;
+        margin-top: 10px;
+        line-height: 1.7;
+          letter-spacing: 1.7px;
         @include tablet {
-          width: 550px;
+          width: 600px;
         }
         @include mobile {
-          width: 500px;
-          font-size: 16px;
+          width: 400px;
+          font-size: 17px;
           line-height: 1.7;
+          letter-spacing: 1.7px;
         }
         @include sm {
-          font-size: 14px;
+          font-size: 12px;
           width: 300px;
           line-height: 1.7;
+        margin-top: 0px;
+
         }
       }
       .buttons {
@@ -141,15 +146,45 @@
     position: absolute;
     top: 0;
     right: 100px;
+    z-index: 100;
+    @include mobile {
+    right: 30px;
+    }
     img {
       width: 120%;
       height: 100%;
       object-fit: cover;
-      @include mobile {
-        display: none;
+      @include tablet {
+        width:470px;
+        height:470px;
+        bottom:0;
+        right: -80px;
+        position:absolute;
       }
+      @include mobile {
+        width:400px;
+        height:400px;
+        bottom:0;
+        right: -30px;
+        position:absolute;
+      }
+      @media (max-width: 650px) {
+        width:330px;
+        height:250px;
+        right: -30px;
+
+      }
+      @include sm {
+        width:300px;
+        height:300px;
+        bottom:0;
+        right: -30px;
+        position:absolute;
+      }
+
     }
   }
+  // animated slider Text
   .slidingTextContainer {
     position: absolute;
     font-size: 50vh;
